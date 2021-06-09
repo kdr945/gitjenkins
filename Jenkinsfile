@@ -8,13 +8,13 @@ pipeline{
     stages{
         stage('ne'){
             steps{
-                
-                if($State=="Start"){
-                    echo 'yes'
-                }else{
-                    echo 'no'
-                }
-                
+                step{
+                    if($State=="Start"){
+                        echo 'yes'
+                    }else{
+                        echo 'no'
+                    }
+                }                
               
                 
                                   
