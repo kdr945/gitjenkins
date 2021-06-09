@@ -10,6 +10,7 @@ pipeline{
             steps{
                 script{
                     if("$State"=="Start"){
+                        aws ec2 start-instances --instance-ids $Instance --region us-east-2
                         echo 'yes'
                     }else if("$State"=="Stop"){
                         echo 'no'
