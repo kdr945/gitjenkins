@@ -6,7 +6,7 @@ pipeline{
     
     }
     stages{
-        stage('stage1'){
+        stage('one'){
             steps{
                 script{
                     if [ "$State" == "Start" ]
