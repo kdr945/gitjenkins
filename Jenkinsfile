@@ -7,7 +7,7 @@ pipeline{
 //                     if ( "$State" == "Start" )
 //                     then
 //                     //aws ec2 start-instances --instance-ids $Instance --region us-east-2
-                    echo Instance Started
+                    echo "InstanceStarted"
 //                     elif ( "$State" == "Stop" )
 //                     then
 //                     //aws ec2 stop-instances --instance-ids $Instance --region us-east-2
