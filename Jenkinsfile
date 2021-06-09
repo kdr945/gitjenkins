@@ -6,7 +6,7 @@ pipeline{
     
     }
     stages{
-        stage('one'){
+        stage('ne'){
             steps{
                 
                     if ($"params.State" == "Start")
