@@ -8,7 +8,7 @@ pipeline{
     stages{
         stage('one'){
             steps{
-                script{
+                
                     if ($"params.State" == "Start")
                     then
                     //aws ec2 start-instances --instance-ids $Instance --region us-east-2
@@ -23,7 +23,7 @@ pipeline{
                     echo Instance $InstanceID Restarted
                      fi
 
-                }
+                
             }
         }
 
