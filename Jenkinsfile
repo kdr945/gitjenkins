@@ -11,8 +11,10 @@ pipeline{
                 script{
                     if("$State"=="Start"){
                         echo 'yes'
-                    }else{
+                    }else if("$State"=="Stop"){
                         echo 'no'
+                    }else if("$State"=="Reboot"){
+                        echo 're'
                     }
                 }                
               
