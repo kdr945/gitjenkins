@@ -1,18 +1,23 @@
 pipeline{
     agent any
+    parameters{
+        string(defaultValue: "i-", description: "Instance Id", name: "Instance")
+        choice(choices: ['Start', 'Stop', 'Reboot'], description: 'state', name: 'State')
+    
+    }
     stages{
         stage('stage1'){
             steps{
                 script{
-                    if ( "$State" == "Start" )
+                    if ( params.State == "Start" )
                     then
                     //aws ec2 start-instances --instance-ids $Instance --region us-east-2
                     echo "InstanceStarted"
-                    elif ( "$State" == "Stop" )
+                    elif ( params.State == "Stop" )
                     then
                     //aws ec2 stop-instances --instance-ids $Instance --region us-east-2
                     echo "Instance Stopped"
-                    elif ( "$State" == "Reboot" )
+                    elif ( params.State == "Reboot" )
                     then
                     //aws ec2 reboot-instances --instance-ids $Instance --region us-east-2
                     echo "Instance Restarted"
