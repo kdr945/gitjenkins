@@ -9,7 +9,7 @@ pipeline{
         stage('ne'){
             steps{
                 script{
-                    if($State=="Start"){
+                    if("$State"=="Start"){
                         echo 'yes'
                     }else{
                         echo 'no'
