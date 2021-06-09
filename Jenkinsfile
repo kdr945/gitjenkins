@@ -8,7 +8,7 @@ pipeline{
     stages{
         stage('ne'){
             steps{
-                step{
+                script{
                     if($State=="Start"){
                         echo 'yes'
                     }else{
