@@ -11,7 +11,7 @@ pipeline{
                 script{
                     if("$State"=="Start"){
                         sh 'aws ec2 start-instances --instance-ids $Instance --region us-east-2'
-                        echo 'yes'
+                        echo Instance $InstanceID Started
                     }else if("$State"=="Stop"){
                         sh 'aws ec2 stop-instances --instance-ids $Instance --region us-east-2'
                         echo 'no'
