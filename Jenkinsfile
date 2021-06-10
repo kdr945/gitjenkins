@@ -11,13 +11,13 @@ pipeline{
                 script{
                     if("$State"=="Start"){
                         sh 'aws ec2 start-instances --instance-ids $Instance --region us-east-2'
-                        echo 'Instance $InstanceID Started'
+                        echo 'Instance $(InstanceID) Started'
                     }else if("$State"=="Stop"){
                         sh 'aws ec2 stop-instances --instance-ids $Instance --region us-east-2'
-                        echo 'Instance $InstanceID Stopped'
+                        echo 'Instance $(InstanceID) Stopped'
                     }else if("$State"=="Reboot"){
                         sh 'aws ec2 reboot-instances --instance-ids $Instance --region us-east-2'
-                        echo 'Instance $InstanceID Restarted'
+                        echo 'Instance $(InstanceID) Restarted'
                     }
                 }                
               
